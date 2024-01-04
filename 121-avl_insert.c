@@ -5,7 +5,6 @@ int balance(const binary_tree_t *tree);
 avl_t *avl_insert_recursive(avl_t **tree, avl_t *parent, avl_t **new, int value);
 size_t height(const binary_tree_t *tree);
 
-
 /**
  * avl_insert - Inserts a value into an AVL tree.
  * @tree: A double pointer to the root node of the AVL tree to insert into.
