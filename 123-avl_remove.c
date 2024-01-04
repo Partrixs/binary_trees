@@ -46,6 +46,12 @@ int successor(bst_t *node)
 
 }
 
+/**
+ * bst_remove - remove a node from a BST tree
+ * @root: root of the tree
+ * @value: node with this value to remove
+ * Return: the tree changed
+ */
 bst_t *bst_remove(bst_t *root, int value)
 {
 	int type = 0;
