@@ -44,19 +44,6 @@ void free_queue(levelorder_queue_t *head)
 }
 
 /**
- * pop - Pops the head of a levelorder_queue_t queue.
- * @head: A double pointer to the head of the queue.
- */
-void pop(levelorder_queue_t **head)
-{
-	levelorder_queue_t *tmp;
-
-	tmp = (*head)->next;
-	free(*head);
-	*head = tmp;
-}
-
-/**
  * push - Pushes a node to the back of a levelorder_queue_t queue.
  * @node: The binary tree node to print and push.
  * @head: A double pointer to the head of the queue.
@@ -77,6 +64,19 @@ void push(binary_tree_t *node, levelorder_queue_t *head,
 	}
 	(*tail)->next = new;
 	*tail = new;
+}
+
+/**
+ * pop - Pops the head of a levelorder_queue_t queue.
+ * @head: A double pointer to the head of the queue.
+ */
+void pop(levelorder_queue_t **head)
+{
+	levelorder_queue_t *tmp;
+
+	tmp = (*head)->next;
+	free(*head);
+	*head = tmp;
 }
 
 /**
